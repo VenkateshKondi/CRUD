@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+    
+        <div class=" col-4 m-4">
+            <div class="mb-3">
+                <label class="form-label" for="inputEmail">ID</label>
+                <input type="email" class="form-control" placeholder="Enter ID"   [(ngModel)]="userDetails.id">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="inputPassword">Name</label>
+                <input  class="form-control" placeholder="Enter Name"  [(ngModel)]="userDetails.name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="inputPassword">Short Name</label>
+                <input  class="form-control" placeholder="Enter Short Name"  [(ngModel)]="userDetails.shortName">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" (click)="addUser()">submit</button>
+            </div>        
+    </div>
+    <div class="col-4"></div>
+    </div>
+    </div>                                                

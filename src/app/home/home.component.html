@@ -1,0 +1,39 @@
+<div class="container" style="height: 100vw;">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-striped table-bordered">
+        <thead class="bg-light thead-primary">
+          <tr style="align-items:center ;">
+            <th></th>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>Short Name</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dt of data;index as i ">
+
+            <td>
+
+              <img class="rounded-right border border-dark" style="width: auto; height: 150px; border-radius: 50%;"
+                src={{dt.url}}>
+            </td>
+            <td class="text-center">{{ dt.id }}</td>
+            <td class="text-center">{{ dt.name }}</td>
+            <td class="text-center">{{ dt.shortName }}</td>
+            <td class="text-center">
+              <button type="button" (click)="editMethod(dt.id)"
+                class="btn btn-outline-primary btn-rounded">Edit</button>
+            </td>
+            <td class="text-center">
+              <button type="button" class="btn btn-outline-danger" (click)="DeleteUser(i)">Del</button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
