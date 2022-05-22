@@ -6,80 +6,71 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class UserInfoService {
-  // temp: any=[];
-
-
   constructor(private httpref : HttpClient) { }
-  //  private _url='./assets/fakeapi.json'
-   
-  //  getData(){
-
-  //   return this.httpref.get(this._url)
-  //   }
-
   userDetails = [
     {
-      name: 'ertyrtre',
+      name: 'kondi venkatesh',
       id: 1,
-      shortName: 'accusamus beatae ad facilis cum similique qui sunt',
+      shortName: 'venki',
+      mail:"kvenkatesh@ariqt.com",
       url: 'https://via.placeholder.com/600/92c952',
-      thumbnailUrl: 'https://via.placeholder.com/150/92c952',
     },
     {
-      name: 'gfjfg',
+      name: 'Athapuram  Anilkumar',
       id: 2,
-      shortName: 'reprehenderit est deserunt velit ipsam',
+      shortName: 'anil',
+      mail: "aanilkumar@ariqt.com",
       url: 'https://via.placeholder.com/600/771796',
-      thumbnailUrl: 'https://via.placeholder.com/150/771796',
     },
     {
-      name: 'xgnfgxh',
+      name: 'Arun Paul',
       id: 3,
-      shortName: 'officia porro iure quia iusto qui ipsa ut modi',
+      shortName: 'arun',
+      mail: "apaul@ariqt.com",
       url: 'https://via.placeholder.com/600/24f355',
-      thumbnailUrl: 'https://via.placeholder.com/150/24f355',
     },
     {
-      name: 'ghjdghj',
+      name: 'Balamani  Krishna',
       id: 4,
-      shortName: 'culpa odio esse rerum omnis laboriosam voluptate repudiandae',
+      shortName: 'bala',
+      mail: "bkrishna@ariqt.com",
       url: 'https://via.placeholder.com/600/d32776',
-      thumbnailUrl: 'https://via.placeholder.com/150/d32776',
     },
     {
-      name: 'vfbfghsfh',
+      name: 'Abhijith Reddy',
       id: 5,
-      shortName: 'natus nisi omnis corporis facere molestiae rerum in',
+      shortName: 'abhijith',
+      mail: "areddy@ariqt.com",
       url: 'https://via.placeholder.com/600/f66b97',
-      thumbnailUrl: 'https://via.placeholder.com/150/f66b97',
     },
     {
-      name: 'dzftgdfg',
+      name: 'Donthiboina Nithya',
       id: 6,
-      titshortNamele: 'accusamus ea aliquid et amet sequi nemo',
+      titshortNamele: 'nithya',
+      mail: "dnithya@ariqt.com",
       url: 'https://via.placeholder.com/600/56a8c2',
-      thumbnailUrl: 'https://via.placeholder.com/150/56a8c2',
+      shortName:'internationoal',
     },
     {
-      name: 'hjkljkl',
+      name: 'Gourav Jyoti Kamila',
       id: 7,
-      shortName: 'officia delectus consequatur vero aut veniam explicabo molestias',
+      shortName: 'gourav',
+      mail: "gkamila@ariqt.com",
       url: 'https://via.placeholder.com/600/b0f7cc',
-      thumbnailUrl: 'https://via.placeholder.com/150/b0f7cc',
     },
     {
-      name: 'hjkfhkh',
+      name: 'Goli Rahul  Reddy',
       id: 8,
-      shortName: 'aut porro officiis laborum odit ea laudantium corporis',
+      shortName: 'rahul',
+      mail: "greddy@ariqt.com",
       url: 'https://via.placeholder.com/600/54176f',
-      thumbnailUrl: 'https://via.placeholder.com/150/54176f',
     },
     {
-      name: 'fghfh',
+      name: 'Gaddam Kishore Kumar',
       id: 9,
-      shortName: 'qui eius qui autem sed',
+      shortName: 'kishore',
+      mail: "gkishore@ariqt.com",
       url: 'https://via.placeholder.com/600/51aa97',
-      thumbnailUrl: 'https://via.placeholder.com/150/51aa97',
     },
   ];
 

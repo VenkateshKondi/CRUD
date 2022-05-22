@@ -3,3 +3,13 @@
     background-color: #04c3ee;
     border-color: #5b288e;
   }
+  .table tr.active{
+    background-color: rgb(226, 222, 222)
+  }
+  .table tr:hover{
+    cursor:pointer;
+    border:1.2px solid blue;
+    // background-color:rgb(235, 186, 97);
+    // transition-duration: 1.4s;
+  }
+  

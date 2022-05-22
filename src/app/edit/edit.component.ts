@@ -19,7 +19,12 @@ export class EditComponent implements OnInit {
     private _eh: UserInfoService,
     private _router: Router) { }
   ngOnInit(): void {
-    this.id=this._activatedRoute.snapshot.paramMap.get('id')
+    // this.id=this._activatedRoute.snapshot.paramMap.get('id')
+     this._activatedRoute.params.subscribe((param=>{
+       this.id=param['id']
+     }))
+
+     
     this._eh.getData().subscribe((data) => {
       this.apiData = data;
       this.userDetails = this.GetById(this.id);
@@ -38,7 +43,6 @@ return this.apiData[index];
 update() {
 let index = this.findIndex(this.id);
 this._eh.userDetails[index] = this.userDetails;
-this._router.navigate(['home']);
+this._router.navigate(['home',{id:index+1}]);
 }
-
 }

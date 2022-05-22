@@ -1,9 +1,16 @@
-<nav class="navbar bg-dark">
-    <img style="border-radius: 50%;" src="../../assets/images/ariqtlogo.jpg" height="30px">
-    <p class="text-white"> <b>ANGULAR PROJECT</b></p>
-   <div class="ms-4 ">
-    <button class="btn btn-dark" type="submit" routerLink="/home">HOME</button>
-    <button style="border-radius: 10%;" class="ms-2 btn btn-dark" type="submit" routerLink="/add">ADD NEW</button>
-   </div>
+<nav class="navbar bg-info">
+    <h2 class="mx-2">
+      <!-- <img style="border-radius: 50%;" src="../../assets/images/ariqtA.jpg" height="40px"> -->
+      <span style="border-radius:3%" class="mx-2 text-black badge bg-warning " 
+        >ANGULAR CRUD </span
+      >
+    </h2>
+    <ul class="p-0 m-0">
+      <li style="list-style: none">
+    <button class="me-2  btn btn-outline-light router" routerLinkActive="active" type="submit" routerLink="/home">HOME</button>
+    <button class="me-2 btn btn-outline-light" routerLinkActive="active" type="submit" routerLink="/add">ADD NEW</button>
+      </li>
+    </ul>
   </nav>
 <router-outlet></router-outlet>
+ 

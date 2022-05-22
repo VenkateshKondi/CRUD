@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, myRoutings } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { HttpClientModule  } from '@angular/common/http';
-import { EditComponent } from './edit/edit.component';
-import { AddComponent } from './add/add.component';
 import { FormsModule } from '@angular/forms';
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    EditComponent,
-    AddComponent,
+    myRoutings,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

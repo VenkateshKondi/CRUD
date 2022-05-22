@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { UserInfoService } from '../user-info.service';
 import { HttpClient  } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +12,15 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   title = 'CRUD';
   data: any=[];
-  constructor(private _http:HttpClient,private _userInfo:UserInfoService,private _router:Router) { }
+  selectedId: any;
+  constructor(private _http:HttpClient,private _userInfo:UserInfoService,private _router:Router,private _activatedRoute:ActivatedRoute) { }
   // private _url="./assets/fakeapi.json";
   ngOnInit(): void {
-    this.getUsers()
+    this.getUsers(),
+    this._activatedRoute.paramMap.subscribe((param:ParamMap)=>{
+      this.selectedId=param.get('id')
+      console.log(this.selectedId)
+    })
   }
   public userDetails:any;
   getUsers(){
@@ -30,7 +35,11 @@ export class HomeComponent implements OnInit {
     }
   } 
   
-  editMethod(dt:any){
-     this._router.navigate(["/home",dt])
+  editMethod(index:any){
+     this._router.navigate(["/home",index+1])
   } 
+  isSelected(x:any){
+    return x.id==this.selectedId
+  }
 }
+ 

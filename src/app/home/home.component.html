@@ -1,36 +1,51 @@
-<div class="container" style="height: 100vw;">
+<div class="container-fluid" style="height: 100vw">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered">
+      <table class="table mt-1">
         <thead>
-          <tr style="align-items:center ;">
-            <th></th>
+          <tr style="text-align: center">
+            <th>PHOTO</th>
             <th>ID</th>
             <th>NAME</th>
-            <th>Short Name</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
+            <th>SHORT NAME</th>
+            <th>MAIL-ID</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let dt of data;index as i ">
-
-            <td>
-
-              <img class="rounded-right border border-dark" style="width: auto; height: 150px; border-radius: 50%;"
-                src={{dt.url}}>
+          <tr
+            *ngFor="let dt of data; index as i"
+            (click)="editMethod(i)"
+            [class.active]="isSelected(dt)"
+          >
+            <td class="text-center align-middle">
+              <img
+                class="rounded-circle border border-dark"
+                style="width: auto; height: 150px"
+                src="{{ dt.url }}"
+              />
             </td>
-            <td class="text-center">{{ dt.id }}</td>
-            <td class="text-center">{{ dt.name }}</td>
-            <td class="text-center">{{ dt.shortName }}</td>
-            <td class="text-center">
-              <button type="button" (click)="editMethod(dt.id)"
-                class="btn btn-outline-primary btn-rounded">Edit</button>
+            <td class="text-center align-middle">{{ dt.id }}</td>
+            <td class="text-center align-middle">{{ dt.name }}</td>
+            <td class="text-center align-middle">{{ dt.shortName }}</td>
+            <td class="text-center align-middle">{{ dt.mail }}</td>
+            <td class="text-center align-middle">
+              <button
+                type="button"
+                (click)="editMethod(i)"
+                class="btn btn-outline-primary btn-rounded"
+              >
+                Edit
+              </button>
             </td>
-            <td class="text-center">
-              <button type="button" class="btn btn-outline-danger" (click)="DeleteUser(i)">Del</button>
+            <td class="text-center align-middle">
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                (click)="DeleteUser(i)"
+              >
+                Del
+              </button>
             </td>
-
           </tr>
         </tbody>
       </table>
